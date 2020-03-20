@@ -43,7 +43,7 @@ class ApiController extends Controller
      */
     public function getMatches()
     {
-        return Match::join('matches', 'venues.id', '=', 'matches.venue_id')
+        return Match::join('matches', 'matched.venue_id', '=', 'venues.venue_id')
                     ->get();
     }
 
