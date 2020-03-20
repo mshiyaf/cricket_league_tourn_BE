@@ -21,6 +21,7 @@ Route::prefix('v1')->group(function(){
         Route::get('getUsers', 'Api\AuthController@getUsers');
         Route::get('teams', 'Api\ApiController@getTeams');
         Route::get('team/{name}', 'Api\ApiController@getTeam');
+        Route::get('matches', 'Api\ApiController@getMatches');
         Route::get('countries', 'CountriesController@show');
         // Route::get('getSlots/{staff_id}/{month}/{day}/{year}','Api\SlotsController@getSlots');
         // Route::post('bookSlot/{company_id}/{staff_id}/{month}/{day}/{year}','Api\AppointmentsController@bookSlot');
