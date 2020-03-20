@@ -7,12 +7,9 @@ use Illuminate\Http\Request;
 
 use App\Team;
 use App\Match;
-<<<<<<< HEAD
-=======
 use App\Venue;
 use App\Player;
 use App\Result;
->>>>>>> local_branch
 
 class ApiController extends Controller
 {
