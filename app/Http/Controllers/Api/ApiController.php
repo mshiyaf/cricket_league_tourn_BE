@@ -36,14 +36,14 @@ class ApiController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display matches
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function getMatches()
     {
-        //
+        return Match::join('matches', 'matched.venue_id', '=', 'venues.venue_id')
+                    ->get();
     }
 
     /**
