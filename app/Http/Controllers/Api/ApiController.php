@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Team;
+use App\Match;
 
 class ApiController extends Controller
 {
@@ -36,14 +37,14 @@ class ApiController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display matches
      *
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function getMatches()
     {
-        //
+        return Match::left('matches', 'venues.id', '=', 'matches.venue_id')
+                    ->get();
     }
 
     /**
